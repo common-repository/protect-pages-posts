@@ -1,0 +1,11 @@
+<?php
+class class_protect_ur_video_repository {
+
+		function update_advance_file_by_post_id( $file_info ) {
+		$data = array( 'is_prevented' => $file_info['is_prevented'], );
+		$where = array( 'post_id' => $file_info['post_id'] );
+		$result = $this->wpdb->update( $this->table_name, $data, $where );
+		return $result;
+	}
+
+}
